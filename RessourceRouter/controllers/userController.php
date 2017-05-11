@@ -1,4 +1,7 @@
-<?php 
+<?php
+/**
+ * class de test
+ */
 class userController extends BaseController
 {
 	
@@ -19,7 +22,7 @@ class userController extends BaseController
 
 	public function test($id)
 	{
-		echo "methode test $id userController";
+		echo "methode test de $id userController";
 	
 	}
 	public function home()

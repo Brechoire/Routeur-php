@@ -1,4 +1,7 @@
-<?php 
+<?php
+/**
+ * class de test
+ */
 class postController extends BaseController
 {
 	
@@ -13,7 +16,12 @@ class postController extends BaseController
 	}
 	public function view($id)
 	{
-		echo "methode view : $id postController";
+		if ($id) {
+			echo "methode view : $id postController";
+		} else {
+			echo "rin";
+		}
+		
 	}
 
 	public function services()

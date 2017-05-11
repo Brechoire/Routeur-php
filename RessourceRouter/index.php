@@ -3,12 +3,11 @@
 Test routeur
  */
 require 'Router.php';
-echo "<pre>";
 Router::get('/','user@index');
-Router::get('/user-{id}/', 'user@test');
-Router::get('/user/', 'user@show');
+Router::get('/user-{id}/', 'user@test')->with('id','[1-9]');
+Router::get('/users/', 'user@show');
 Router::get('/all/', 'user@all');
 Router::ressources('/post/*', ['index','show','view', 'services']);
 Router::get('/home/', 'user@home');
-Router::run();
+Router::run(); // Ne sourtout pas oublier, sinon ça ne marchera pas
 ?>
